@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+ ejercicio23
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio23</title>
+    <link rel="stylesheet" href="ejercicio23.css">
+</head>
+<body>
+    <h2>Selecciona un lenguaje de programación:</h2>
+    
+    <label>
+        <input type="radio" name="language" value="JavaScript"> JavaScript
+    </label>
+    <label>
+        <input type="radio" name="language" value="Python"> Python
+    </label>
+    <label>
+        <input type="radio" name="language" value="C++"> C++
+    </label>
+
+    <div id="result">Selecciona una opción</div>
+
+    <script src="../pv_tp2_grupo9/JS/ejercicio23.js"></script>
+</body>
+</html>
+=======
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguajes de  Programación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selecciona un lenguaje</h1>
+    <label><input type="radio" name="lenguaje" value="JavaScript"> JavaScript</label>
+    <label><input type="radio" name="lenguaje" value="Python"> Python</label>
+    <label><input type="radio" name="lenguaje" value="Java"> Java</label>
+    <p id="resultado"></p>
+
+    <script>
+        const radios = document.querySelectorAll('input[name="lenguaje"]');
+        const resultado = document.getElementById('resultado');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', (event) => {
+                resultado.textContent = `Has elegido: ${event.target.value}`;
+                console.log(event.target.value);
+            });
+        });
+    </script>
+</body>
+</html>
+ main
