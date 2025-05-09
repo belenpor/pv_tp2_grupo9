@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f1f1; /* Fondo claro: Rosa pastel muy suave */
+    color: #333; /* Color oscuro para buen contraste */
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e3f2fd; /* Azul claro pastel */
+    color: #333; /* Texto oscuro para legibilidad */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #5c6bc0; /* Azul pastel para el texto dinámico */
+}
