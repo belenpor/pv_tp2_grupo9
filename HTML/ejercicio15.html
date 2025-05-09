@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Retornar Mes</title> 
+    <script> 
+       function retornarMes(numeroMes) { 
+            const meses = [ 
+                "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+               "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" 
+            ]; 
+            if (numeroMes >= 1 && numeroMes <= 12) { 
+                return `El mes es: ${meses[numeroMes - 1]}`; 
+            } else { 
+                return "No es un mes válido."; 
+            } 
+        } 
+        document.addEventListener("DOMContentLoaded", () => { 
+            const numero = parseInt(prompt("Ingrese un número entre 1 y 12:")); 
+            const resultado = retornarMes(numero); 
+            document.getElementById("resultado").innerHTML = `<h2>${resultado}</h2>`; 
+        }); 
+    </script> 
+</head> 
+<body> 
+    <h1>Retornar Mes</h1> 
+    <div id="resultado"></div> 
+</body> 
+</html> 
