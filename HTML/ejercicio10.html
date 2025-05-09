@@ -1,0 +1,29 @@
+//Solicitar al usuario que ingrese tres números enteros, luego mostrar como resultado 
+//el promedio de los tres. El promedio de tres números se calcula sumando los tres 
+//números y dividiendo entre 3 
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Calcular el Promedio</title> 
+    <script> 
+        document.addEventListener("DOMContentLoaded", () => { 
+            const num1 = parseInt(prompt("Ingrese el primer número entero:")); 
+            const num2 = parseInt(prompt("Ingrese el segundo número entero:")); 
+            const num3 = parseInt(prompt("Ingrese el tercer número entero:")); 
+            const promedio = (num1 + num2 + num3) / 3; 
+            document.getElementById("resultado").innerHTML = ` 
+                <h2>Primer número: ${num1}</h2> 
+                <h2>Segundo número: ${num2}</h2> 
+                <h2>Tercer número: ${num3}</h2> 
+                <h2>Promedio: ${promedio.toFixed(2)}</h2>`; 
+        }); 
+    </script> 
+</head> 
+<body> 
+    <h1>Promedio de Tres Números</h1> 
+
+    <div id="resultado"></div> 
+</body> 
+</html> 
