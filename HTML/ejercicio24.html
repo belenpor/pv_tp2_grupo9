@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 24</title>
+<style>
+/* Estilos generales para el cuerpo de la página */
+body {
+padding: 0;
+margin: 0;
+height: 100vh; /* Altura total de la ventana del navegador */
+display: flex;
+align-items: center; /* Centra verticalmente el contenido */
+justify-content: center; /* Centra horizontalmente el contenido */
+background-color: #f4f4f4; /* Color de fondo gris claro */
+font-family: 'Arial', sans-serif; /* Fuente utilizada en la página */
+box-sizing: border-box; /* Incluye padding y border en el cálculo de las dimensiones
+*/
+}
+/* Estilos para el contenedor que rodea al botón */
+.contenedor {
+width: 300px; /* Ancho fijo del contenedor */
+height: 400px; /* Altura fija del contenedor */
+border: 1px solid gray; /* Borde gris alrededor del contenedor */
+box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de
+profundidad */
+border-radius: 10px; /* Bordes redondeados del contenedor */
+display: flex;
+align-items: center; /* Centra verticalmente el botón dentro del contenedor */
+justify-content: center; /* Centra horizontalmente el botón dentro del contenedor
+*/
+background-color: white; /* Fondo blanco inicial del contenedor */
+transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
+}
+/* Estilos para el botón */
+button {
+background-color: #e74c3c; /* Color de fondo rojo para el botón */
+color: white; /* Color del texto en el botón */
+padding: 10px 25px; /* Espaciado interno del botón */
+border: none; /* Elimina el borde del botón */
+border-radius: 5px; /* Bordes redondeados del botón */
+cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+font-size: 16px; /* Tamaño del texto dentro del botón */
+transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo al
+hacer hover */
+}
+/* Estilos para el botón cuando se hace hover (al pasar el ratón por encima) */
+button:hover {
+background-color: #34495e; /* Cambia el color de fondo del botón a un azul oscuro
+*/
+}
+</style>
+</head>
+<body>
+<!-- Contenedor que encierra el botón -->
+<div class="contenedor">
+<!-- Botón con un ID para identificarlo y un atributo aria-label para accesibilidad -->
+<button id="boton" aria-label="Cambiar color del contenedor">Click
+aquí</button>
+</div>
+<script>
+// Array de colores que se utilizarán para cambiar el fondo del contenedor
+const colores = ["yellow", "green", "purple", "pink"];
+let indice = 0; // Índice inicial para rastrear el color actual
+// Añade un evento 'click' al botón con ID "boton"
+document.getElementById("boton").addEventListener("click", function() {
+// Incrementa el índice de color y usa el módulo para reiniciarlo si se excede el
+//tamaño del array
+indice = (indice + 1) % colores.length;
+// Cambia el color de fondo del contenedor al siguiente color en el array
+document.querySelector(".contenedor").style.backgroundColor = colores[indice];
+});
+</script>
+</body>
+</html>
